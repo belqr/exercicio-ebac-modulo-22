@@ -1,0 +1,53 @@
+@use 'variables';
+
+.event {
+  margin-top: 50px;
+  padding: 80px 0;
+
+  &--image-left {
+
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (max-width: 640px) {
+   
+    .container {
+      display: block;
+    }
+
+    &__details {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__details {
+
+    &__title {
+      margin-bottom: 16px;
+      font-size: 24px;
+      font-weight: bold;
+      color: variables.$pinkColor;
+    }
+
+    &__description {
+      line-height: 22px;
+      color: variables.$blackColor;
+    }
+  }
+
+  &__image {
+    max-width: 360px;
+  }
+}

@@ -1,0 +1,36 @@
+@use '../variables';
+
+.button {
+  margin-left: 20px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 4px;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &--primary {
+    color: variables.$whiteColor;
+    background-color: variables.$pinkColor;
+    border: 3px solid variables.$pinkColor;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      background-color: variables.$whiteColor;
+      color: variables.$pinkColor;
+    }
+  }
+}
